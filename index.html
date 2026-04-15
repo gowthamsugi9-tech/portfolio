@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gowtham R — Frontend Developer crafting modern, responsive web experiences with HTML, CSS, JavaScript & more.">
+    <meta name="keywords" content="Gowtham R, Frontend Developer, Web Developer, Portfolio, HTML, CSS, JavaScript">
+    <meta name="author" content="Gowtham R">
+    <title>Gowtham R — Frontend Developer Portfolio</title>
+
+    <!-- Google Fonts: Inter (body) + Space Grotesk (display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════ LOADING SCREEN ═══════════════════════════════ -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <span class="loader-text">GR</span>
+        </div>
+        <p class="loader-tagline">Loading Experience...</p>
+    </div>
+
+    <!-- ═══════════════════════════════ CUSTOM CURSOR ═══════════════════════════════ -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <a class="nav-logo" href="#">
+            <span class="logo-bracket">&lt;</span>GR<span class="logo-bracket">/&gt;</span>
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-item active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-item" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-item" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-item" data-section="projects">Projects</a></li>
+            <li><a href="#timeline" class="nav-item" data-section="timeline">Journey</a></li>
+            <li><a href="#contact" class="nav-item" data-section="contact">Contact</a></li>
+        </ul>
+
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+    </nav>
+
+    <!-- ═══════════════════════════════ HERO SECTION ═══════════════════════════════ -->
+    <section class="hero" id="home">
+        <!-- Animated background elements -->
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="hero-particles"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="profile">
+            <div class="subprofile">
+                
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            
+
+            <h1 class="hero-name reveal-up" style="--delay:.1s">
+                Hi, I'm <span class="gradient-text">Gowtham R</span>
+            </h1>
+
+            <h2 class="hero-title reveal-up" style="--delay:.2s">
+                <span class="typing-wrapper">
+                    <span id="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </span>
+            </h2>
+
+            <p class="hero-bio reveal-up" style="--delay:.3s">
+                I craft responsive, pixel-perfect web experiences with clean code
+                and visually compelling digital products that users love.
+            </p>
+
+            <div class="hero-cta reveal-up" style="--delay:.4s">
+                <a href="#projects" class="btn btn-primary" id="cta-projects">
+                    <span>View Projects</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="portfolioimaged/Gowtham_CV.pdf" download class="btn btn-primary" id="cta-projects">
+                    <span>Download Resume</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline" id="cta-contact">
+                    <span>Contact Me</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator reveal-up" style="--delay:.6s">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ABOUT SECTION ═══════════════════════════════ -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Passionate about creating<br><span class="gradient-text">digital experiences</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal-up" style="--delay:.1s">
+                    <p>
+                        I'm a Frontend Developer with hands-on experience building responsive and
+                        user-friendly websites. I specialize in creating clean, efficient, and visually
+                        appealing digital experiences using modern web technologies.
+                    </p>
+                    <p>
+                        With a strong academic background (7.96 CGPA, no arrears), I bring discipline
+                        and consistency to every project. I continuously improve my skills to stay
+                        aligned with industry trends and best practices.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Performance</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-universal-access"></i>
+                            <span>Accessibility</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-cards reveal-up" style="--delay:.2s">
+                    <div class="info-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Education</h3>
+                        <p>Bachelor's Degree<br>CGPA: 7.96</p>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Experience</h3>
+                        <p>Full Stack Course<br>Multiple Projects</p>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-certificate"></i></div>
+                        <h3>Certifications</h3>
+                        <p>SQL, Power BI<br>TCS NQT</p>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Goal</h3>
+                        <p>Building impactful<br>web solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ SKILLS SECTION ═══════════════════════════════ -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">My Skills</span>
+                <h2 class="section-title">Technologies I <span class="gradient-text">work with</span></h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Card 1: HTML -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.05s" data-skill="95">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="95">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 95"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="95">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-html5 skill-brand-icon" style="color:#e34c26"></i>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup & accessibility</p>
+                </div>
+
+                <!-- Skill Card 2: CSS -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.1s" data-skill="90">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="90">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 90"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="90">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-css3-alt skill-brand-icon" style="color:#264de4"></i>
+                    <h3>CSS3</h3>
+                    <p>Animations, Grid & Flexbox</p>
+                </div>
+
+                <!-- Skill Card 3: JavaScript -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.15s" data-skill="85">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="85">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 85"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="85">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-js skill-brand-icon" style="color:#f0db4f"></i>
+                    <h3>JavaScript</h3>
+                    <p>ES6+, DOM & APIs</p>
+                </div>
+
+                <!-- Skill Card 4: React -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.2s" data-skill="70">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="70">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 70"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="70">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-react skill-brand-icon" style="color:#61dafb"></i>
+                    <h3>React</h3>
+                    <p>Components & State</p>
+                </div>
+
+                <!-- Skill Card 5: Python -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.25s" data-skill="75">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="75">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 75"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="75">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-python skill-brand-icon" style="color:#3572A5"></i>
+                    <h3>Python</h3>
+                    <p>Backend & scripting</p>
+                </div>
+                <!-- Skill Card 5: jquerry -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.25s" data-skill="75">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="75">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 75"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="75">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-j" style="color: rgb(239, 90, 1);"></i>
+                    <h3>Jquerry</h3>
+                    <p>Scripting & Optimization</p>
+                </div>
+
+                <!-- Skill Card 5: Nodejs -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.25s" data-skill="75">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="75">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 75"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="75">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-node" style="color: rgb(239, 90, 1);"></i>
+                    <h3>NodeJS</h3>
+                    <p>Backend & Framework</p>
+                </div>
+
+                <!-- Skill Card 5: express -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.25s" data-skill="75">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="75">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 75"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="75">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-xing" style="color: rgb(9, 239, 1);"></i>
+                    <h3>ExpressJs</h3>
+                    <p>Backend & Framework</p>
+                </div>
+
+
+                <!-- Skill Card 6: Git -->
+                <div class="skill-card glass-card reveal-up" style="--delay:.3s" data-skill="80">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-progress-ring" data-progress="80">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                                <circle class="ring-fill" cx="60" cy="60" r="54" style="--progress: 80"/>
+                            </svg>
+                            <div class="skill-percent"><span class="count-up" data-target="80">0</span>%</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-git-alt skill-brand-icon" style="color:#f05032"></i>
+                    <h3>Git</h3>
+                    <p>Version control & workflows</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ PROJECTS SECTION ═══════════════════════════════ -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card reveal-up" style="--delay:.05s">
+                    <div class="project-image">
+                        <img src="portfolioimaged/ecommerce.png" alt="E-Commerce Website" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://ucart-shopping.netlify.app/" target="_blank" class="project-link" aria-label="Live Demo">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="https://github.com/gowthamsugi9-tech/ucart-shopping" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-number">01</span>
+                        <h3>E-Commerce Platform</h3>
+                        <p>A fully functional e-commerce platform with product listing, cart system, and payment flow. Built with responsive design for all devices.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card reveal-up" style="--delay:.15s">
+                    <div class="project-image">
+                        <img src="portfolioimaged/ecommerce2.png" alt="Perfume Store" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://cube-assignments.netlify.app/" target="_blank" class="project-link" aria-label="Live Demo">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="https://github.com/gowthamsugi9-tech" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-number">02</span>
+                        <h3>Perfume Store</h3>
+                        <p>An elegant e-commerce website for a perfume brand with dynamic UI components and fully responsive design across all breakpoints.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Placeholder — portfolio itself) -->
+                <div class="project-card glass-card reveal-up" style="--delay:.25s">
+                    <div class="project-image project-image-gradient">
+                        <div class="project-placeholder">
+                            <i class="fa-solid fa-code"></i>
+                            <span>This Portfolio</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#home" class="project-link" aria-label="View">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>You're Here</span>
+                                </a>
+                                <a href="https://github.com/gowthamsugi9-tech" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-number">03</span>
+                        <h3>Developer Portfolio</h3>
+                        <p>A modern, interactive portfolio built with glassmorphism design, smooth animations, and a premium user experience you're viewing right now.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ TIMELINE SECTION ═══════════════════════════════ -->
+    <section class="section timeline-section" id="timeline">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Learning <span class="gradient-text">Timeline</span></h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line">
+                    <div class="timeline-line-fill" id="timeline-fill"></div>
+                </div>
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item reveal-up" style="--delay:.05s">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">2019 – 2021</span>
+                        <h3>Higher Secondary Education</h3>
+                        <p>Graduated with 90% (HSC) with strong performance and deep interest in technology and computer science.</p>
+                        <div class="timeline-badge">90% HSC</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item reveal-up" style="--delay:.1s">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">2021 – 2025</span>
+                        <h3>Bachelor's Degree</h3>
+                        <p>Undergraduate degree focusing on data analysis, programming, and system design. Achieved 7.96 CGPA with zero arrears.</p>
+                        <div class="timeline-badge">CGPA 7.96</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item reveal-up" style="--delay:.15s">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">2023</span>
+                        <h3>SQL Bootcamp — Udemy</h3>
+                        <p>Completed comprehensive SQL training covering complex queries, joins, subqueries, and database management.</p>
+                        <div class="timeline-badge">Certified</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item reveal-up" style="--delay:.2s">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-chart-area"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">2023</span>
+                        <h3>Data Visualisation — Power BI</h3>
+                        <p>Gained expertise in data visualization tools, dashboard creation, and business intelligence reporting.</p>
+                        <div class="timeline-badge">Certified</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item reveal-up" style="--delay:.25s">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">2024</span>
+                        <h3>TCS National Qualifier Test</h3>
+                        <p>Cleared TCS NQT demonstrating aptitude in programming, reasoning, and technical problem-solving.</p>
+                        <div class="timeline-badge">Qualified</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item reveal-up" style="--delay:.3s">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">2024 – Present</span>
+                        <h3>Full Stack Development</h3>
+                        <p>Building production-ready web applications and continuously expanding my skillset in frontend and backend technologies.</p>
+                        <div class="timeline-badge">In Progress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CONTACT SECTION ═══════════════════════════════ -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's work <span class="gradient-text">together</span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrap glass-card reveal-up" style="--delay:.1s">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="form-name" required autocomplete="name">
+                            <label for="form-name" class="floating-label">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="form-email" required autocomplete="email">
+                            <label for="form-email" class="floating-label">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="form-subject" required>
+                            <label for="form-subject" class="floating-label">Subject</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="form-message" rows="4" required></textarea>
+                            <label for="form-message" class="floating-label">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="form-submit">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info reveal-up" style="--delay:.2s">
+                    <div class="contact-info-card glass-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:gowthamsugi8@gmail.com">gowthamsugi8@gmail.com</a>
+                    </div>
+                    <div class="contact-info-card glass-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Location</h3>
+                        <span>India</span>
+                    </div>
+                    <div class="contact-info-card glass-card">
+                        <i class="fa-solid fa-download"></i>
+                        <h3>Resume</h3>
+                        <a href="portfolioimaged/Gowtham_CV.pdf" download>Download CV</a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/gowtham-r-695280241" target="_blank" class="social-icon" aria-label="LinkedIn" id="social-linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/gowthamsugi9-tech" target="_blank" class="social-icon" aria-label="GitHub" id="social-github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:gowthamsugi8@gmail.com" class="social-icon" aria-label="Email" id="social-email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="site-footer" id="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>GR<span class="logo-bracket">/&gt;</span>
+                </a>
+                <p>Crafting digital experiences with passion and precision.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="footer-social-icons">
+                    <a href="https://www.linkedin.com/in/gowtham-r-695280241" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/gowthamsugi9-tech" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:gowthamsugi8@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gowtham R. All Rights Reserved.</p>
+            <p class="footer-sub">Designed & Built with <span class="heart">&hearts;</span> by Gowtham R</p>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════ BACK TO TOP ═══════════════════════════════ -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
