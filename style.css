@@ -14,7 +14,7 @@ justify-content: center;
     width: 200px;
     height: 265px;
     border-radius: 80px;
-    background-image: url(/portfolioimaged/profileimg.jpg);
+    background-image: url("./portfolioimaged/profileimg.jpg");
     background-size: cover;
 }
 /* ─── CSS Custom Properties (Dark Theme) ─── */
