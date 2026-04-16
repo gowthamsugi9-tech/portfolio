@@ -24,7 +24,7 @@ justify-content: center;
     --bg-primary:     rgba(0, 0, 0, 0.6);
     --bg-secondary:   rgb(0, 0, 0);
     --bg-tertiary:    #000000;
-    background-image: url(portfolioimaged/background.jpg);
+    background-image: url("./portfolioimaged/background.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     /* Glass / Surface */
